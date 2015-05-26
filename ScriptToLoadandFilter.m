@@ -1,6 +1,10 @@
 %% Script to load and preprocess EEG-fMRI data
+% add script location to path
+P = mfilename('fullpath');
+[direc,~]=fullfile(P);
+addpath(direc)
 
-
+%filter settings
 bandpass_bounds = [0.5 100];
 notch_bounds = [59 61];
 % Set filter bounds
@@ -84,7 +88,7 @@ else
 end
 EEG.data=data_reref;
 EEG=eeg_checkset(EEG);
-EEG.chanlocs=readlocs('~/Dropbox/Matlab/EEGfMRI_code_v5/location_files/efmri34.ced');
+EEG.chanlocs=readlocs('efmri34.ced');
 EEG=eeg_checkset(EEG);
 EEG=pop_saveset(EEG,'filename',[EEG.filename(1:end-4) '_noEPs.set'],'filepath',pathnames);
 
