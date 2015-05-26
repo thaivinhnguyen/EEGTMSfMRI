@@ -13,7 +13,8 @@ import_eplink_NoGa.m
   -- function that imports raw EEG data into EEGLAB format **does not run** gradient artifact removal. 
   
 read_amp_binaryv3.m
-  -- function called by import_eplink_NoGa that reads in the raw binary EEG data files in the custom format from EP-link system. 
+  -- function called by import_eplink_NoGa that reads in the raw binary EEG data files in the custom format from EP-link system.
+  
 shortestpath.m
   -- rereferencing function for custom EEG-fMRI cap
   
