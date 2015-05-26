@@ -4,7 +4,7 @@ Code repository for simultaneous EEG-TMS-fMRI project
 Created Jordan Muraskin @ Columbia University
 
 Scripts and functions to be used on EEG data collected with custom-built MRI compatible amplifier (EP-link). 
-Requires Matlab and EEGLAB
+Requires Matlab and EEGLAB, data can be made available upon request (jsm2112@columbia.edu)
 
 ScriptToLoadandFilter.m 
   -- Main script to preprocess EEG data collected outside of MRI scanner with amplifier. 
