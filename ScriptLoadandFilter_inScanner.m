@@ -35,7 +35,7 @@ eventchans=47;
 ref=1:1:46;
 cap=1;
 
-EEG = import_eplink(final_filename,cap);
+EEG = import_eplink_wTMS(final_filename,cap);
 
 EEG = eeg_checkset( EEG );
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 0,'setname',[filename_base '-raw'],'gui','off');
