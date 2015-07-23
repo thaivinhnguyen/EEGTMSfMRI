@@ -25,6 +25,8 @@ function setupDeconvAnalysis(outputdir,feat_file,confound_file,stimTimes,extraRe
 %
 %                   If evorthog(i,j) = 1, then regressor #j is
 %                       orthogonalized with respect to regressor #i
+%   
+%   Example run - setupDeconvAnalysis(fullfile(pwd,'deConv/block1'),fullfile(pwd,'filtered_func_data.nii.gz'),'confoundevs.txt',[5:5:460],[])
 %
 %   Written 3/18/2014 by BC
 %   edited. 3/19/2014 by JM-added the ability to set durations for each
