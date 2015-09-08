@@ -4,9 +4,14 @@ function EEG=import_eplink(filename,cap)
 %% read from raw binary file
 [EEG_data,EventChannel,~]=read_amp_binaryv3(filename,cap);
 
+% %% removal gradient artitifact
+% [EEG_GA_Removed]=gradient_removal(EEG_data,2,1);
+% figure;spectopo(EEG_GA_Removedold,0,488);xlim([3,30]),title('Old Code')
+% figure;plot(EEG_GA_Removedold(1,1:2000)),title('Old Code')
 %% removal gradient artitifact
-[EEG_GA_Removed]=gradient_removal(EEG_data,2,1);
-
+[EEG_GA_Removed]=gradient_removal_noTR(EEG_data,10,1);
+% figure;spectopo(EEG_GA_Removed,0,488);xlim([3,30]),title('Fixed Code')
+% figure;plot(EEG_GA_Removed(1,1:2000)),title('Fixed Code')
 
 %% Check Event Channel is Same Size as data chans
 if size(EEG_GA_Removed,2)~=size(EventChannel,2)

@@ -21,7 +21,7 @@ end
 %% Need to change to where the loc file directory
 % electrodeloc_dir = '/Volumes/lorentz2/BASEBALL/';
 pathnames=pwd; %save files to current directory
-prefix='restingstate';
+prefix='melonTest_run1';
 eegSession=[];
 
 filename_base = sprintf('%s%d',prefix,eegSession);
@@ -35,7 +35,7 @@ eventchans=47;
 ref=1:1:46;
 cap=1;
 
-EEG = import_eplink_wTMS(final_filename,cap);
+EEG = import_eplink(final_filename,cap);
 
 EEG = eeg_checkset( EEG );
 [ALLEEG EEG CURRENTSET] = pop_newset(ALLEEG, EEG, 0,'setname',[filename_base '-raw'],'gui','off');
